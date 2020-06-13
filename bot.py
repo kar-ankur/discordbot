@@ -1,9 +1,25 @@
 import discord
+import random
+import os
+from dotenv import load_dotenv
+from discord.ext import commands
 
-client= discord.Client()
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
+client= commands.Bot(command_prefix='$')
 
 @client.event
 async def on_ready():
     print('Bot is ready')
 
-client.run('NzIwODgyNTg0NjA2OTk4NjMw.XuMfmA.GfdLL0cHQT03qNsg4BUKiLQJx1o')
+@client.command()
+async def hello(ctx):
+    await ctx.send('hello')
+
+@client.command()
+async def game(ctx):
+    game=['R6S','VALORANT','GTA5','skribblio','fortnite','CSGO','dead by daylight','chess','business','']
+    await ctx.send(random.choice(game))   
+
+
+client.run(TOKEN)
