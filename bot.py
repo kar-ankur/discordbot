@@ -25,5 +25,33 @@ async def game(ctx):
 async def ping(ctx):
     await ctx.send('Pong!{}ms'.format(round(client.latency*1000)))
 
+@client.command()
+async def bangu(ctx):
+    await ctx.send('https://cdn.discordapp.com/emojis/692472840922071050.png?v=1')
+
+@client.command()
+async def bala(ctx):
+    await ctx.send('https://cdn.discordapp.com/emojis/694862322648219709.png?v=1')
+
+@client.command()
+async def ronit(ctx):
+    await ctx.send('https://cdn.discordapp.com/emojis/692472718037352459.png?v=1')
+
+@client.command()
+async def tanmay(ctx):
+    await ctx.send('https://cdn.discordapp.com/emojis/692386639489794058.png?v=1')
+
+@client.command()
+async def kade(ctx):
+    await ctx.send('https://cdn.discordapp.com/emojis/692473080148262932.png?v=1')
+
+@client.command()
+async def mtg(ctx):
+    await ctx.send('https://cdn.discordapp.com/emojis/696120065845624912.png?v=1')
+
+@client.command()
+async def kunal(ctx):
+    await ctx.send('https://cdn.discordapp.com/emojis/696121633814872114.png?v=1')
+
 
 client.run(TOKEN)
