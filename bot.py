@@ -18,8 +18,12 @@ async def hello(ctx):
 
 @client.command()
 async def game(ctx):
-    game=['R6S','VALORANT','GTA5','skribblio','fortnite','CSGO','dead by daylight','chess','business','']
+    game=['R6S','VALORANT','GTA5','skribblio','fortnite','CSGO','dead by daylight','chess','business']
     await ctx.send(random.choice(game))   
+
+@client.command()
+async def ping(ctx):
+    await ctx.send('Pong!{}ms'.format(round(client.latency*1000)))
 
 
 client.run(TOKEN)
